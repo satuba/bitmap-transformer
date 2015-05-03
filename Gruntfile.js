@@ -1,15 +1,15 @@
 "use strict";
 
 module.exports = function(grunt) {
-	grunt.loadNpmTasks("grunt-contrib-jshint");
-	grunt.loadNpmTasks("grunt-simple-mocha");
-	grunt.loadNpmTasks("grunt-contrib-watch");
-	//grunt.loadNpmTasks("grunt-jscs");
+  grunt.loadNpmTasks("grunt-contrib-jshint");
+  grunt.loadNpmTasks("grunt-simple-mocha");
+  grunt.loadNpmTasks("grunt-contrib-watch");
+  //grunt.loadNpmTasks("grunt-jscs");
 
-	  grunt.initConfig({
+  grunt.initConfig({
     jshint: {
       dev: {
-        src: ["Gruntfile.js", "server*.js", "test/**/*.js"]
+        src: ["*.js", "lib/**/**.js", "test/**/*.js"]
       },
       options: {
         node: true,
@@ -35,11 +35,16 @@ module.exports = function(grunt) {
         files: ["<%= jshint.dev.src %>"],
         tasks: ["jshint", "simplemocha"]
       }
-    }
+    },
 
-  //   jscs: {
-  //   main: [ "server*.js" ],
-		// }
+    // jscs: {
+    //   options: {
+    //     config:'.jscsrc'
+    //   },
+    //   dev: {
+    //     src: ['*.js', 'lib/**/*.js', 'test/**/*.js']
+    //   }  
+    // }
   });
 
   grunt.registerTask("test", ["jshint:dev"]);
