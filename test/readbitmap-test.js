@@ -17,7 +17,7 @@ describe("test testing", function() {
 describe("get header info", function() {
 
   beforeEach(function(done) {
-    fs.readFile("./bitmap1.bmp", function(err, data) {
+    fs.readFile("./img/bitmap1.bmp", function(err, data) {
       if(err) {
         return console.log(err);
       }
