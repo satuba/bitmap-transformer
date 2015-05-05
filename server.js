@@ -2,4 +2,4 @@
 
 var readbitmap = require("./lib/readbitmap").readBitmap;
 
-readbitmap("./bitmap1.bmp");
+readbitmap("./img/bitmap1.bmp");
