@@ -45,7 +45,7 @@ module.exports = function(grunt) {
           config: ".jscsrc"
         }
       }
-    }  
+    }
   });
 
   grunt.registerTask("test", ["jshint:dev"]);
