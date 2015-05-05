@@ -3,7 +3,6 @@
 var fs = require("fs");
 var expect = require("chai").expect;
 var readbitmap = require("../lib/readbitmap").getHeaderInfo;
-var transform = require("../lib/transform").transform;
 var header;
 
 //test that tests will work.
